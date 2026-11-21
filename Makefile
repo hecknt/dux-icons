@@ -11,11 +11,11 @@ install:
 	install -m 644 index.theme.in $(DESTDIR)$(DATADIR)/index.theme.in
 	rm -rf $(DESTDIR)$(DATADIR)/src
 	cp -R src $(DESTDIR)$(DATADIR)/src
-	ln -sfn $(DATADIR)/scripts/build.py $(DESTDIR)$(BINDIR)/dux-icons
+	ln -sfnr $(DATADIR)/scripts/build.py $(DESTDIR)$(BINDIR)/dux-icons
 
 link:
 	install -d $(BINDIR)
-	ln -sfn $(CURDIR)/scripts/build.py $(BINDIR)/dux-icons
+	ln -sfnr $(CURDIR)/scripts/build.py $(BINDIR)/dux-icons
 
 uninstall:
 	rm -f $(DESTDIR)$(BINDIR)/dux-icons
